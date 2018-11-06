@@ -30,6 +30,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/terms">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/privacy">Privacy</a>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -81,11 +87,14 @@
         </main>
 
         <footer class="bg-dark text-white py-4 mt-5 text-center">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="/">Home</a></li>
-            <li class="list-inline-item"><a href="/">Terms</a></li>
-            <li class="list-inline-item"><a href="/">Privacy</a></li>
-          </ul>
+          <nav>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="/">Home</a></li>
+              <li class="list-inline-item"><a href="/">Terms</a></li>
+              <li class="list-inline-item"><a href="/">Privacy</a></li>
+            </ul>
+          </nav>
+
           <div>
               &copy; 2018 <a href="/">{{ config('app.name', 'Laravel') }}</a>. All rights reserved.
           </div>

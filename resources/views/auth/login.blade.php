@@ -58,12 +58,12 @@
                             </button>
                         </div>
 
-                        <div >
-                            <a class="btn btn-link px-0 float-left " href="{{ route('password.request') }}">
-                                {{ __('Forgot Your Password?') }}
+                        <div class="form-group d-flex justify-content-between">
+                            <a href="{{ route('password.request') }}">
+                                Forgot your password?
                             </a>
-                            <a class="btn btn-link px-0 float-right" href="{{ route('register') }}">
-                                {{ __('Don\'t have an account?') }}
+                            <a href="{{ route('register') }}">
+                                Don't have an account?
                             </a>
                         </div>
                     </form>

@@ -15,7 +15,8 @@ Auth::routes();
 
 Route::get('/dashboard',					'DashboardController@index')->name('dashboard');
 
-Route::get('/privacy', function () { return view('pages.privacy'); });
+Route::get('/terms',						function () { return view('pages.terms'); });
+Route::get('/privacy',						function () { return view('pages.privacy'); });
 
 Route::get('/',								'ShortUrlController@create')->name('ShortUrl.create');
 Route::post('/shortUrl',					'ShortUrlController@store')->name('ShortUrl.store');

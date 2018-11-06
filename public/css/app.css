@@ -13529,24 +13529,21 @@ footer a:hover {
   text-decoration: none;
 }
 
-footer a {
-  color: rgba(255, 255, 255, 0.5);
-}
-
+a,
 footer a:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: inherit;
 }
 
-.btn-link:hover {
-  text-decoration: none;
+a:hover {
+  text-decoration: none !important;
 }
 
-.btn-link {
-  color: #212529;
+footer nav a {
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.btn-link:hover {
-  color: grey;
+footer nav a:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .success-url {
