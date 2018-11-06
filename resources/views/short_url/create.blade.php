@@ -15,7 +15,7 @@
                     <label for="longUrl">Enter web address (URL) here:</label>
                     
                     <div class="input-group input-group-lg">
-                        <input type="text" id="longUrl" class="form-control{{ $errors->has('long_url') ? ' is-invalid' : '' }}" name="long_url" value="{{ old('long_url') }}" required autofocus>
+                        <input type="text" id="longUrl" class="form-control{{ $errors->has('long_url') ? ' is-invalid' : '' }}" name="long_url" value="{{ $errors->has('long_url') ? old('long_url') : request('url') }}" required autofocus>
 
                         <div class="input-group-append">
                             <input type="submit" value="Shorten" class="btn btn-outline-secondary">
@@ -52,12 +52,17 @@
 
             <hr>
 
-            <div class="mb-5">
+            <div>
                 <h5>Bookmarklet</h5>
-                <p>
-                    Drag this link to your browser's bookmarks bar to shorten URLs on click:
 
-                    <a href="javascript:void(location.href='{{ url('/') }}/?url='+encodeURIComponent(location.href))">{{ config('app.name', 'Laravel') }}</a>
+                <p>
+                    Drag this link to your browser's bookmarks bar:
+
+                    <a href="javascript:void(location.href='{{ url('/') }}/?url='+encodeURIComponent(location.href))" onclick="return false">{{ config('app.name', 'Laravel') }}</a>
+                </p>
+
+                <p>
+                    Once this is on your Bookmarks bar, you'll be able to make a Short URL with just two clicks. By clicking on the bookmark, It will redirect you to our website that's already filled up with url of the page you're currently at, ready to be shorten.
                 </p>
             </div>
         </div>
