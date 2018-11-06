@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard',					'DashboardController@index')->name('dashboard');
+
+Route::get('/privacy', function () { return view('pages.privacy'); });
+
+Route::get('/',								'ShortUrlController@create')->name('ShortUrl.create');
+Route::post('/shortUrl',					'ShortUrlController@store')->name('ShortUrl.store');
+Route::get('/{codeOrAlias}',				'ShortUrlController@show')->name('ShortUrl.show');
+
+Route::get('/{codeOrAlias}/preview',		'PreviewController@show')->name('Preview.show');

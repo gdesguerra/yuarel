@@ -26,4 +26,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function short_urls() {
+        return $this->hasMany('App\ShortUrl');
+    } 
 }
