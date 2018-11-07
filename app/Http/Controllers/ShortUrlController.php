@@ -85,6 +85,9 @@ class ShortUrlController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $shortUrl = auth()->user()->short_urls()->findOrFail($id);
+        $shortUrl->delete();
+
+        return redirect()->back()->with('success', "Shortened URL with '".$shortUrl->code."' code has been deleted!");
     }
 }

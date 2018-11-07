@@ -1,5 +1,5 @@
 main {
-	min-height: 500px;
+	min-height: 600px;
 }
 
 footer a:hover {
@@ -22,6 +22,10 @@ footer nav a:hover {
     color: rgba(255, 255, 255, 0.75) !important;
 }
 
+.navbar .dropdown-menu a:active {
+    background-color: #6c757d !important;
+}
+
 .success-url {
 	background-color: #e9ecef;
 	min-height: calc(2.15rem + 2px);
@@ -33,4 +37,124 @@ footer nav a:hover {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
+}
+
+.my-btn-sm {
+    border-radius: 2px;
+    padding: 1px 4px;
+    font-size: .8em;
+}
+
+// ##################################################
+
+div.statistics table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+div.statistics table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+div.statistics table th,
+div.statistics table td {
+    padding: .625em;
+}
+
+div.statistics table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+
+    div.statistics table {
+        border: 1px solid #ccc;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-width: 467px;
+        text-align: center
+    }
+
+    div.statistics table tr {
+        width: 0%;
+        white-space: nowrap;
+    }
+
+    div.statistics table td:nth-child(3) {
+        width: 100%;
+        white-space:
+        nowrap; text-overflow:ellipsis;
+        overflow: hidden;
+        max-width:1px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    div.statistics table {
+        border: 0;
+    }
+
+    div.statistics table caption {
+        font-size: 1.3em;
+    }
+
+    div.statistics table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        width: 100%;
+    }
+
+    div.statistics table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+        width: 100%;
+    }
+
+    div.statistics table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        width: 100%;
+        word-wrap: break-word;
+        text-align: right;
+    }
+
+    div.statistics table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+
+    div.statistics table td:last-child {
+        border-bottom: 0;
+    }
+
+    div.statistics table a.long-url {
+        word-break: break-all;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    div.statistics .table td {
+        border-top: 0;
+    }
 }
