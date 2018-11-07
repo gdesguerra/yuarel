@@ -13650,6 +13650,7 @@ div.statistics table th {
     width: 100%;
     word-wrap: break-word;
     text-align: right;
+    min-height: 32px;
   }
 
   div.statistics table td::before {

@@ -55,7 +55,7 @@
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
 
-                                            <a class="btn my-btn-sm btn-danger float-md-left delete-shortened-url" href="#" data-toggle="modal" data-target="#modalDialog"> Delete</a>
+                                            <a class="btn my-btn-sm btn-danger float-md-left delete-shortened-url" href="#"> Delete</a>
                                         </form>
                                     </td>
                                 </tr>

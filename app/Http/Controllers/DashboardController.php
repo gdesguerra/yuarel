@@ -23,7 +23,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $shortUrls = auth()->user()->short_urls()->latest()->paginate(2);
+        $shortUrls = auth()->user()->short_urls()->latest()->paginate(10);
         return view('dashboard.index', compact('shortUrls'));
     }
 }

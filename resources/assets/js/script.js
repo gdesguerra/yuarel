@@ -1,9 +1,11 @@
-$(function() {
+$(document).ready(function() {
 	// Enable bootstrap tooltips everywhere
 	$('[data-toggle="tooltip"]').tooltip()
 
     // Custom modal dialog
     function dialog(btnType, title, message, confirmCallback, closeCallback) {
+        $('#modalDialog').modal('show');
+        
 	    $('#modalLabel').html(title);
 	    $('#modalBody').html(message);
 	    $('#modalConfirm').removeClass();
@@ -52,5 +54,4 @@ $(function() {
 		    }
 		);
     });
-
-})
+});
