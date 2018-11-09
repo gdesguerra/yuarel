@@ -15,7 +15,7 @@
                     <label for="longUrl">Enter web address (URL) here:</label>
                     
                     <div class="input-group input-group-lg">
-                        <input type="text" id="longUrl" class="form-control{{ $errors->has('long_url') ? ' is-invalid' : '' }}" name="long_url" value="{{ $errors->has('long_url') ? old('long_url') : request('url') }}" required autofocus>
+                        <input type="text" id="longUrl" class="form-control{{ $errors->has('long_url') ? ' is-invalid' : '' }}" name="long_url" value="{{ $errors->has('long_url') ? old('long_url') : request('url') }}" maxlength="2047" required autofocus>
 
                         <div class="input-group-append">
                             <input type="submit" value="Shorten" class="btn btn-outline-secondary">
@@ -37,7 +37,7 @@
                             <span class="input-group-text">{{ url('/') }}/</span>
                         </div>
 
-                        <input type="text" id="customAlias" class="form-control{{ $errors->has('alias') ? ' is-invalid' : '' }}" name="alias" value="{{ old('alias') }}" aria-label="Custom Alias" aria-describedby="customAlias">
+                        <input type="text" id="customAlias" class="form-control{{ $errors->has('alias') ? ' is-invalid' : '' }}" name="alias" value="{{ old('alias') }}" maxlength="30" aria-label="Custom Alias" aria-describedby="customAlias">
                     </div>
 
                     <small id="customAliasHelp" class="form-text text-muted">May contain letters, numbers, dashes and underscores.</small>

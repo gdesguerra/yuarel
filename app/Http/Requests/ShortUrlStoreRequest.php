@@ -24,7 +24,7 @@ class ShortUrlStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'long_url' => ['required', 'url', 'active_url', 'max:2083'],
+            'long_url' => ['required', 'url', 'active_url', 'max:2047'],
             'alias' => ['nullable','unique:short_urls,alias','unique:short_urls,code', 'alpha_dash', 'max:30']
         ];
     }
