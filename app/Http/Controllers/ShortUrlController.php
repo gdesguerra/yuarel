@@ -27,10 +27,6 @@ class ShortUrlController extends Controller
      */
     public function store(ShortUrlStoreRequest $request)
     {
-        // Prepend "http://"" if it doesn't exists in the URL.
-        if (!preg_match("~^(?:f|ht)tps?://~i", $request->long_url))
-            $request->merge(['long_url' => "http://" . $request->long_url]);
-        
         // If no user is logged in and no alias, use existing shortened urls that's created by guests.
         if (!Auth::check() && !$request->filled('alias')) {
             $existingShortUrl = ShortUrl::doesnthave('user')
