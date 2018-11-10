@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12 col-lg-10">
 
             @if(session('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -24,7 +24,7 @@
 
             @if(count($shortUrls) > 0)
                 <div class="statistics">
-                    <table class="table table-sm" >
+                    <table class="table table-sm mb-0 mb-md-2" >
                         <thead>
                             <tr>
                                 <th scope="col">Code</th>
@@ -63,7 +63,7 @@
                         </tbody>
                     </table>
                 </div>
-                <small class="form-text text-muted">Short URL format is "{{ url('/CodeOrAlias') }}".</small>
+                <small class="form-text text-muted mb-2">Short URL format is "{{ url('/CodeOrAlias') }}".</small>
                 {{ $shortUrls->links() }}
             @else
                 <h4>You have no Shorten URL.</h4>

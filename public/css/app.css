@@ -13548,6 +13548,12 @@ footer nav a:hover {
 
 .navbar .dropdown-menu a:active {
   background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+.page-link:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(125, 125, 125, 0.25);
 }
 
 .my-btn-sm {
