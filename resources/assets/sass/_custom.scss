@@ -26,6 +26,12 @@ footer nav a:hover {
     background-color: #6c757d !important;
 }
 
+.my-btn-sm {
+    border-radius: 2px;
+    padding: 1px 4px;
+    font-size: .8em;
+}
+
 .success-url {
 	background-color: #e9ecef;
 	min-height: calc(2.15rem + 2px);
@@ -37,12 +43,6 @@ footer nav a:hover {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-}
-
-.my-btn-sm {
-    border-radius: 2px;
-    padding: 1px 4px;
-    font-size: .8em;
 }
 
 // ##################################################

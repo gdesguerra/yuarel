@@ -1,5 +1,4 @@
-$(document).ready(function() {
-	// Enable bootstrap tooltips everywhere
+$(document).ready(function() {// Enable bootstrap tooltips everywhere
 	$('[data-toggle="tooltip"]').tooltip()
 
     // Custom modal dialog
@@ -25,13 +24,15 @@ $(document).ready(function() {
 		$('[data-id="' + target + '"]').toggleClass('d-inline-block');
 	});
 
-	// Copy shortened url to clipboard
-	$('#copyShortenedUrl').click(function(e) {
+	// Copy url to clipboard 
+	$('.copyText').click(function(e) {
 		e.preventDefault();
+		var targetId = $(this).data('target');
+
 		$(this).addClass('disabled');
 		$(this).text('').append('<i class="fa fa-check-square-o mr-1"></i>Copied to clipboard');
 
-		var el = document.getElementById('shortenedUrl');
+		var el = document.getElementById(targetId);
 		var range = document.createRange();
 		range.selectNodeContents(el);
 		var sel = window.getSelection();
@@ -39,7 +40,7 @@ $(document).ready(function() {
 		sel.addRange(range);
 		document.execCommand('copy');
     });
-
+	
 	// Confirms user before deleting shotened url
     $('.delete-shortened-url').click(function(e) {
         e.preventDefault();

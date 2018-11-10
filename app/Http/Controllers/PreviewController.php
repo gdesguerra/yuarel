@@ -15,7 +15,7 @@ class PreviewController extends Controller
      */
     public function show($codeOrAlias)
     {
-        $shortUrl = ShortUrl::where('code', $codeOrAlias)->orWhere('alias', $codeOrAlias)->first();
+        $shortUrl = ShortUrl::where('code', $codeOrAlias)->orWhere('alias', $codeOrAlias)->firstOrFail();
 
         $longUrl = $shortUrl->long_url;
         $shortenedUrl = url('/'.$codeOrAlias);

@@ -34,7 +34,8 @@ class ShortUrlController extends Controller
                                     ->first();
 
             if (!is_null($existingShortUrl))
-                return redirect('/'.$existingShortUrl->code."/preview");
+                return redirect('/'.$existingShortUrl->code."/preview")
+                    ->with('success', 'Your URL has been successfully shortened!');
         }
         
         // Generate unique random code for the short url.
@@ -52,7 +53,8 @@ class ShortUrlController extends Controller
 
         $codeOrAlias = $request->filled('alias') ? $shortUrl->alias : $shortUrl->code;
 
-        return redirect('/'.$codeOrAlias."/preview");
+        return redirect('/'.$codeOrAlias."/preview")
+            ->with('success', 'Your URL has been successfully shortened!');
     }
 
     /**
