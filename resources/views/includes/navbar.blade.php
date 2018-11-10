@@ -40,12 +40,12 @@
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="/dashboard">
-                          Dashboard
+                          <i class="fa fa-columns mr-3"></i>Dashboard
                       </a>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
-                          {{ __('Logout') }}
+                          <i class="fa fa-sign-out mr-3"></i>{{ __('Logout') }}
                       </a>
 
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

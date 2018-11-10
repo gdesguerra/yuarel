@@ -41,7 +41,7 @@
                                     <td scope="row" data-label="Code">{{ $shortUrl->code }}</td>
                                     <td data-label="Alias">{{ $shortUrl->alias }}</td>
                                     <td data-label="Long Url" data-toggle="tooltip" data-placement="top" title="{{ $shortUrl->long_url }}">
-                                        <a href="#" class="btn my-btn-sm btn-secondary d-md-none" data-toggle="long-url" data-target="long-url-{{ $key }}" onclick="return false">Toggle</a>
+                                        <a href="#" class="btn my-btn-sm btn-secondary d-md-none" data-toggle="long-url" data-target="long-url-{{ $key }}" onclick="return false"><i class="fa fa-eye mr-1"></i>Show</a>
                                         <a data-id="long-url-{{ $key }}" class="long-url d-none d-md-inline-block" href="{{ $shortUrl->long_url }}">
                                             {{ $shortUrl->long_url }}
                                         </a>
@@ -54,8 +54,10 @@
                                         <form method="POST" action="/short-url/{{ $shortUrl->id }}">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
-
-                                            <a class="btn my-btn-sm btn-danger float-md-left delete-shortened-url" href="#"> Delete</a>
+        
+                                            <a class="btn my-btn-sm btn-danger float-md-left delete-shortened-url" href="#">
+                                                <i class="fa fa-trash mr-1 mr-md-0"></i><span class="d-sm-inline d-md-none">Delete</span>
+                                            </a>
                                         </form>
                                     </td>
                                 </tr>

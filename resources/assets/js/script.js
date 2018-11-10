@@ -21,6 +21,13 @@ $(document).ready(function() {// Enable bootstrap tooltips everywhere
 	// Toggle bootsraps 'd-block' to target element to show
 	$('[data-toggle="long-url"]').click(function() {
 		var target = $(this).data('target');
+		var isShown = $('[data-id="' + target + '"]').hasClass('d-inline-block');
+
+		if(isShown)
+			$(this).html('<i class="fa fa-eye mr-1"></i>Show');
+		else
+			$(this).html('<i class="fa fa-eye-slash mr-1"></i>Hide');
+
 		$('[data-id="' + target + '"]').toggleClass('d-inline-block');
 	});
 
@@ -30,7 +37,7 @@ $(document).ready(function() {// Enable bootstrap tooltips everywhere
 		var targetId = $(this).data('target');
 
 		$(this).addClass('disabled');
-		$(this).text('').append('<i class="fa fa-check-square-o mr-1"></i>Copied to clipboard');
+		$(this).html('<i class="fa fa-check-square-o mr-1"></i>Copied to clipboard');
 
 		var el = document.getElementById(targetId);
 		var range = document.createRange();
