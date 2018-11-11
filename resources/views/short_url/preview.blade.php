@@ -5,18 +5,11 @@
 @section('content')
 
 <div class="container">
-    @if(session('success'))
-        <div class="row justify-content-center mb-3" role="alert">
-            <div class="col-md-10 col-lg-8">
-                <div class="alert alert-success alert-dismissible fade show">
-                    {{session('success')}}
-
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
-                </div>
-            </div>
-        </div> 
-    @endif
+    <div class="row justify-content-center mb-3">
+        <div class="col-md-10 col-lg-8">
+            @include('includes.message')
+        </div>
+    </div> 
 
     @isset($shortenedUrl)
         <div class="row justify-content-center mb-3">

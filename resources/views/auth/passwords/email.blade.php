@@ -6,11 +6,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-9 col-md-7 col-lg-5">
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
+            @include('includes.message')
 
             <form method="POST" action="{{ route('password.email') }}" aria-label="{{ __('Reset Password') }}">
                 {{ csrf_field() }}

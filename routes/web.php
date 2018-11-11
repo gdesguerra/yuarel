@@ -13,15 +13,18 @@
 
 Auth::routes();
 
+Route::get('/account/settings',			'UserController@edit')->name('user.edit');
+Route::put('/account',					'UserController@update')->name('user.update');
+
 Route::get('/dashboard',				'DashboardController@index')->name('dashboard');
 
 Route::get('/terms',					function () { return view('pages.terms'); });
 Route::get('/privacy',					function () { return view('pages.privacy'); });
 
-Route::get('/',							'ShortUrlController@create')->name('ShortUrl.create');
-Route::post('/short-url',				'ShortUrlController@store')->name('ShortUrl.store')
+Route::get('/',							'ShortUrlController@create')->name('short_url.create');
+Route::post('/short-url',				'ShortUrlController@store')->name('short_url.store')
 											->middleware('prepend_http');
-Route::delete('/short-url/{id}',		'ShortUrlController@destroy')->name('ShortUrl.destroy');
-Route::get('/{codeOrAlias}',			'ShortUrlController@show')->name('ShortUrl.show');
+Route::delete('/short-url/{id}',		'ShortUrlController@destroy')->name('short_url.destroy');
+Route::get('/{codeOrAlias}',			'ShortUrlController@show')->name('short_url.show');
 
-Route::get('/{codeOrAlias}/preview',	'PreviewController@show')->name('Preview.show');
+Route::get('/{codeOrAlias}/preview',	'PreviewController@show')->name('preview.show');

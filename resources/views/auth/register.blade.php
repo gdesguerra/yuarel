@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-sm-9 col-md-7 col-lg-6">
+        <div class="col-sm-9 col-md-7 col-lg-5">
             <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                 {{ csrf_field() }}
 

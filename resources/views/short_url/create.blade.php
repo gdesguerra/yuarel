@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-9 col-lg-8">
-            <form class="mb-5" method="POST" action="{{ route('ShortUrl.store') }}">
+            <form class="mb-5" method="POST" action="{{ route('short_url.store') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group">
