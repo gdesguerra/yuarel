@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'URL shortener')
-@section('subtitle', 'Create a short URL')
+@section('title', 'URL Shortener')
+@section('subtitle', 'Generate Short URL that will redirect you to your Long URL.')
 
 @section('content')
 
