@@ -47744,6 +47744,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             }).then(function (response) {
                 return _this.googlePageSpeedData = response.data;
+            }).catch(function (error) {
+                return _this.noImageAvailable = true;
             });
         }
     },

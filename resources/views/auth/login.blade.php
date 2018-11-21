@@ -55,16 +55,16 @@
                         {{ __('Login') }}
                     </button>
                 </div>
-
-                <div class="form-group d-flex justify-content-between">
-                    <a href="{{ route('password.request') }}">
-                        Forgot your password?
-                    </a>
-                    <a href="{{ route('register') }}">
-                        Don't have an account?
-                    </a>
-                </div>
             </form>
+
+            <div class="d-flex justify-content-between">
+                <a href="{{ route('password.request') }}">
+                    Forgot your password?
+                </a>
+                <a href="{{ route('register') }}">
+                    Don't have an account?
+                </a>
+            </div>
         </div>
     </div>
 </div>

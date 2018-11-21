@@ -51,7 +51,9 @@ footer nav a:hover {
     border-radius: 0.25rem;
 }
 
-// ##################################################
+.lead {
+    font-size: 1.0rem !important;
+}
 
 div.statistics table caption {
     font-size: 1.5em;
@@ -73,6 +75,14 @@ div.statistics table th {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
+}
+
+// ##################################################
+
+@media screen and (max-width: 472px) {
+    .display-heading {
+        font-size: 3rem !important;
+    }
 }
 
 @media screen and (min-width: 768px) {

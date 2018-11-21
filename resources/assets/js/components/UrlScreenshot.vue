@@ -32,7 +32,9 @@
                         url: this.longUrl,
                         screenshot: true
                     }
-                }).then(response => (this.googlePageSpeedData = response.data));
+                })
+                .then(response => (this.googlePageSpeedData = response.data))
+                .catch(error => (this.noImageAvailable = true));
             }
         },
         computed: {
