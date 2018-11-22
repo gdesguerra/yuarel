@@ -30,18 +30,21 @@
                             @foreach($shortUrls as $key => $shortUrl)
                                 <tr>
                                     <td scope="row" data-label="Code">
-                                        <a href="{{ url($shortUrl->code.'/preview') }}" target="_blank">{{ $shortUrl->code }}</a>
+                                        <a href="{{ url($shortUrl->code.'/preview') }}">{{ $shortUrl->code }}</a>
                                     </td>
                                     <td data-label="Alias">
-                                        <a href="{{ url($shortUrl->alias.'/preview') }}" target="_blank">{{ $shortUrl->alias }}</a>
+                                        <a href="{{ url($shortUrl->alias.'/preview') }}">{{ $shortUrl->alias }}</a>
                                     </td>
                                     <td data-label="Long Url" data-toggle="tooltip" data-placement="top" title="{{ $shortUrl->long_url }}">
                                         <a href="#" class="btn my-btn-sm btn-secondary d-md-none" data-toggle="long-url" data-target="long-url-{{ $key }}" onclick="return false"><i class="fa fa-eye mr-1"></i>Show</a>
-                                        <a data-id="long-url-{{ $key }}" class="long-url d-none d-md-inline-block" href="{{ $shortUrl->long_url }}" target="_blank">
+
+                                        <a data-id="long-url-{{ $key }}" class="long-url d-none d-md-inline-block" href="{{ $shortUrl->long_url }}">
                                             {{ $shortUrl->long_url }}
                                         </a>
                                     </td>
-                                    <td data-label="Visits">{{ $shortUrl->visits_count }}</td>
+                                    <td data-label="Visits">
+                                        {{ $shortUrl->visits_count }}
+                                    </td>
                                     <td data-label="Created At">
                                         {{ date('d-m-Y', strtotime($shortUrl->created_at)) }}
                                     </td>

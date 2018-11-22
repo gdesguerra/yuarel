@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="form-group mb-0">
+                <div class="form-group">
                     <div>
                         <button type="submit" class="btn btn-secondary btn-lg w-100">
                             {{ __('Register') }}
@@ -68,6 +68,12 @@
                     </div>
                 </div>
             </form>
+
+            <div class="d-flex justify-content-between">
+                <a href="{{ route('login') }}">
+                    Already have an account?
+                </a>
+            </div>
         </div>
     </div>
 </div>

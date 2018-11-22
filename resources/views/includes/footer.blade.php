@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="bg-dark text-white py-4 mt-5 text-center">
+<footer class="bg-dark text-white py-4 mt-4 text-center">
   <nav>
     <ul class="list-inline">
       <li class="list-inline-item mr-3"><a href="/">Home</a></li>
